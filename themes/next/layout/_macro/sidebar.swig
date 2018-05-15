@@ -28,22 +28,6 @@
 
       <section class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            {% if theme.avatar %}
-              <img class="site-author-image" itemprop="image"
-                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
-                alt="{{ theme.author }}" />
-            {% endif %}
-              <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
-              <p class="site-description motion-element" itemprop="description">{#
-            #}{% if theme.seo %}{#
-              #}{{ theme.signature }}{#
-            #}{% else %}{#
-              #}{{ theme.description }}{#
-            #}{% endif %}{#
-            #}</p>
-          </div>
-
           <nav class="site-state motion-element">
 
             {% if config.archive_dir != '/' and site.posts.length > 0 %}
