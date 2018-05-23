@@ -114,7 +114,7 @@ function wrappedAxiosClient(baseUrl) {
       method: "POST"
     };
 
-    return fetch(`${baseUri}${urlPath}`, payload);
+    return axios(`${baseUri}${urlPath}`, payload);
   }
 }
 ```
