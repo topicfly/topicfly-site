@@ -2,6 +2,7 @@
 title: Decoupling HTTP clients React-Native 
 date: 2018-05-15 
 author: Hector Yeomans
+author_id: hyeomans
 tags:
   - javascript
   - react-native
