@@ -6,11 +6,21 @@
 > npm install
 > hexo server
 ```
+## New draft
+
+Prefer to start your post as a draft and then convert it to a post:
+
+```
+> hexo new draft your_title
+> hexo server --draft --open
+```
+
 
 ## New post
 
 ```
 > hexo new super_new_post
+>hexo server --open
 ```
 
 Modify `source/_posts/super_new_post.md` front-matter to look something like this:
