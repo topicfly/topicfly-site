@@ -15,6 +15,8 @@ tags:
 
 We will learn how to deploy Hyperledger Fabric and Hyperledger Composer on a distributed network using physically separated nodes connected via Docker Swarm. This guide is not production ready, as it will need case by case specific configuration.
 
+<!-- more -->
+
 I highly recommend to follow the tutorials on each technology first to get familiar with the commands and concepts to understand what is happening.
 
 * [Hyperledger Fabric Tutorial](https://hyperledger-fabric.readthedocs.io/en/release-1.1/tutorials.html)
