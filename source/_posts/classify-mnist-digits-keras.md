@@ -26,7 +26,7 @@ Keras already has a [datasets module](https://keras.io/datasets/) from which I'l
 
 Convolutional Neural Networks (CNN) make the assumption that the input are images.
 
-The CNN arquitecture is defined by different layers: Input Layer, Convolutional Layer, Activation Layer (ReLU), Pooling Layer, Fully-Connected Layer.
+The CNN architecture is defined by different layers: Input Layer, Convolutional Layer, Activation Layer (ReLU), Pooling Layer, Fully-Connected Layer.
 
 The **input layer** normally has the shape `height x width x depth`, in this post example it's *28x28x1* but in color images the *depth* would be 3, one for each value in the RGB color model.
 
@@ -38,7 +38,7 @@ We could combine the conv layer with another conv to a pooling layer and repeat 
 
 <img src="/classify-mnist-digits-keras/conv.png" />
 
-For further detail about Convolutiona Neural Networks you can visit http://cs231n.stanford.edu/ or go the [bibligraphy section](#bibliography).
+For further detail about Convolutiona Neural Networks you can visit http://cs231n.stanford.edu/ or go the [bibliography section](#bibliography).
 
 
 ## Libraries and modules
@@ -58,13 +58,13 @@ from matplotlib import pyplot as plt
 
 I import [Numpy](http://www.numpy.org/) for matrix manipulation, [pyplot](https://matplotlib.org/api/pyplot_api.html) from [matplotlib](https://matplotlib.org/) to render some graphic representation of the data, `keras.util` to more data manipulation, and the [MNIST dataset](https://keras.io/datasets/#mnist-database-of-handwritten-digits) provided by keras.
 
-The keras [Sequential](https://keras.io/models/sequential/) model allows to `add` layers, each layer having its own arquitecture and purpose.
+The keras [Sequential](https://keras.io/models/sequential/) model allows to `add` layers, each layer having its own architecture and purpose.
 
-The idea is to sequentially add different layers to our model util having a Neural Network arquitecture that can process and classify images of handwritting digits.
+The idea is to sequentially add different layers to our model util having a Neural Network architecture that can process and classify images of handwritten digits.
 
 ## Data Preparation
 
-Every Machine Learning model needs some data preparation. Sometimes this is the most exahustive and underrated (for beginners) part of the process.
+Every Machine Learning model needs some data preparation. Sometimes this is the most exhaustive and underrated (for beginners) part of the process.
 
 1. Load dataset.
 2. Separate dataset into training and test datasets.
@@ -123,9 +123,9 @@ Y_test = np_utils.to_categorical(y_test, 10)
 print(Y_train[0]) #[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
 ```
 
-## Neural Network arquitecture
+## Neural Network architecture
 
-There are several layer arquitectures that I could implement, I decided to go as follows:
+There are several layer architectures that I could implement, I decided to go as follows:
 
 ```python
 model = Sequential()
@@ -155,7 +155,7 @@ After the convolutions I want to classify the data with fully connected layers, 
 
 The output layer is a `Dense` layer with 10 nodes, same dimension as an element in `Y_train` and `Y_test`, and [softmax](https://en.wikipedia.org/wiki/Softmax_function) activation function.
 
-I could use more or less Conv2D layers, or add other Dropout between the MaxPooling2D and the second Conv2D, I could change the hyperparameters in each layer, or the total nodes in one of the Dense layers, or use one Dense layer instead of two. Trying several architechtures and mesuring which generalize better is part of the Data Scientist/Machine Learning Engineer daily job.
+I could use more or less Conv2D layers, or add other Dropout between the MaxPooling2D and the second Conv2D, I could change the hyperparameters in each layer, or the total nodes in one of the Dense layers, or use one Dense layer instead of two. Trying several architectures and measuring which generalize better is part of the Data Scientist/Machine Learning Engineer daily job.
 
 ## Compile model
 
@@ -185,9 +185,9 @@ You could select and tweak the `epochs` and `batch_size` (numbers of examples in
 
 <img src="/classify-mnist-digits-keras/keras-fit.png" />
 
-All this data is helpful because when I'm training my model I want the loss to be as close to zero as possible and accuracy close to `1.0` (100%). Also it displays how much time each epoch and step took (50s aprox per epoch).
+All this data is helpful because when I'm training my model I want the loss to be as close to zero as possible and accuracy close to `1.0` (100%). Also it displays how much time each epoch and step took (50s approx per epoch).
 
-I have assigned the `fit` returned value to `history` variable, since I'm going to print a nice ploits in the further section.
+I have assigned the `fit` returned value to `history` variable, since I'm going to print a nice plots in the further section.
 
 ## Evaluate model
 
@@ -293,7 +293,7 @@ history = model.fit(X_train, Y_train,
 score = model.evaluate(X_test, Y_test, verbose=0)
 print("CNN Error: %.2f%%" % (100-score[1]*100))
 print("Loss: %.2f" % score[0])
-print("Accurracy: %.2f%%" % (score[1]*100))
+print("Accuracy: %.2f%%" % (score[1]*100))
 
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
@@ -314,13 +314,13 @@ plt.show()
 
 ## Conclusion
 
-I really like keras to create deep learning models quickly and easily, thus testing ideas and hypothesis in datasets become a more efficent and pleasant work.
+I really like keras to create deep learning models quickly and easily, thus testing ideas and hypothesis in datasets become a more efficient and pleasant work.
 
 I know we didn't cover more in depth topics like what's the loss function or the math behind Adam optimizer, or more about Convolutional Networks theory but I'll leave all those topics for future posts.
 
 ## <a name="bibliography"></a> Bibliography
 
-Here are some links that helped me put togheter this post:
+Here are some links that helped me put together this post:
 
 * http://cs231n.github.io/convolutional-networks/
 * https://www.youtube.com/watch?v=jajksuQW4mc
