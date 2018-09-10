@@ -9,7 +9,7 @@ tags:
   - generators
 ---
 
-![](http://res.cloudinary.com/diesu5vtq/image/upload/c_scale,e_auto_color,w_2087/v1536551949/jason-blackeye-212990-unsplash.jpg)
+![](//res.cloudinary.com/diesu5vtq/image/upload/c_scale,e_auto_color,w_2087/v1536551949/jason-blackeye-212990-unsplash.jpg)
 
 ## Background
 
