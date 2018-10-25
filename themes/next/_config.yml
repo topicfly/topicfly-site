@@ -8,7 +8,7 @@ override: false
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
-  enable: true
+  enable: false
 
 # ---------------------------------------------------------------
 # Site Information Settings
